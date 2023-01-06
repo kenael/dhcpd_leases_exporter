@@ -1,10 +1,11 @@
 package collectors
 
 import (
-	"github.com/DRuggeri/dhcpdleasesreader"
-	"github.com/prometheus/client_golang/prometheus"
 	"sync"
 	"time"
+
+	"github.com/kenael/dhcpdleasesreader"
+	"github.com/prometheus/client_golang/prometheus"
 )
 
 type leaseCollector struct {

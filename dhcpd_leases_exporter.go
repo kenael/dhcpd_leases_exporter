@@ -13,9 +13,9 @@ import (
 	"github.com/prometheus/common/version"
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/DRuggeri/dhcpd_leases_exporter/collectors"
-	"github.com/DRuggeri/dhcpd_leases_exporter/filters"
-	"github.com/DRuggeri/dhcpdleasesreader"
+	"github.com/kenael/dhcpd_leases_exporter/collectors"
+	"github.com/kenael/dhcpd_leases_exporter/filters"
+	"github.com/kenael/dhcpdleasesreader"
 )
 
 var Version = "testing"
@@ -23,8 +23,8 @@ var Version = "testing"
 var (
 	dhcpdLeasesFile = kingpin.Flag(
 		"dhcpd.leases", "Path of the dhcpd.leases file. Defaults to '/var/lib/dhcp/dhcpd.leases' ($DHCPD_LEASES_EXPORTER_LEASES_FILE)",
-	).Envar("DHCPD_LEASES_EXPORTER_LEASES_FILE").Default("leases.test").String()
-	// /var/lib/dhcp/dhcpd.leases
+	).Envar("DHCPD_LEASES_EXPORTER_LEASES_FILE").Default("/var/lib/dhcp/dhcpd.leases").String()
+
 	filterCollectors = kingpin.Flag(
 		"filter.collectors", "Comma separated collectors to enable (Stats,Leases) ($DHCPD_LEASES_EXPORTER_FILTER_COLLECTORS)",
 	).Envar("DHCPD_LEASES_EXPORTER_FILTER_COLLECTORS").Default("Stats").String()

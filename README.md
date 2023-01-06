@@ -1,5 +1,10 @@
 # ISC dhcpd Leases Prometheus Exporter
 
+## Fork
+
+Fork from https://github.com/DRuggeri/dhcpdleasesreader.  
+Here i add a Hack, our DHCP Server have Issues with Time Format.  
+
 A [Prometheus](https://prometheus.io) exporter for the ISC dhcpd server. This exporter consumes the `dhcpd.leases` file ([man page](https://linux.die.net/man/5/dhcpd.leases)) which is periodically written by the dameon. It is based on the [node_exporter](https://github.com/prometheus/node_exporter) and [cf_exporter](https://github.com/bosh-prometheus/cf_exporter) projects.
 
 ## Installation
