@@ -55,3 +55,27 @@ lease 192.168.0.170 {
   set vendor-class-identifier = "android-dhcp-7.1.2";
   client-hostname "amazon-ad4ce45b0";
 }
+lease 10.209.7.121 {
+  starts 3 2023/01/04 13:12:06;
+  ends 3 2023/01/04 14:52:06;
+  tstp 3 2023/01/04 14:52:06;
+  cltt 3 2023/01/04 13:12:06;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 9c:8e:99:17:b4:be;
+  uid "\001\234\216\231\027\264\276";
+  set vendor-class-identifier = "CPQRIB3";
+  client-hostname "server15";
+}
+lease 10.209.7.101 {
+  starts 5 2021/08/06 09:26:24;
+  ends never;
+  tstp never;
+  cltt 5 2021/08/06 09:26:24;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  dynamic-bootp;
+  hardware ethernet 08:17:f4:92:df:00;
+}
